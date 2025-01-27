@@ -3,10 +3,7 @@ package com.sr.product_service.controller;
 
 import com.sr.product_service.entity.ProductEntity;
 import com.sr.product_service.pojo.ProductPojo;
-import com.sr.product_service.pojo.UserPojo;
 import com.sr.product_service.service.ProductService;
-import com.sr.product_service.service.UserClient;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
