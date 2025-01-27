@@ -20,7 +20,10 @@ public class ProductPojo {
 	public int productPrice;
 
 	public String productBrand;
+	
+	public String productCategory;
 
 	public int productUserId;
+	
 
 }
