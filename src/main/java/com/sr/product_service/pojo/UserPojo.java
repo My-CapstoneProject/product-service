@@ -4,14 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class UserPojo {
 	
-	private int userId;
-	private String username;
-	private String password;
-	private int roleId;
+	private int id;
+    private String username;
+    private String role;
 
 }

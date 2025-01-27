@@ -3,9 +3,11 @@ package com.sr.product_service.service;
 import com.sr.product_service.entity.ProductEntity;
 import com.sr.product_service.dao.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -21,11 +23,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public ProductEntity getProductById(int productId) {
-        return productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found with ID: " + productId));
+    public Optional<ProductEntity> getProductById(int productId) {
+        return productRepository.findById(productId);
     }
-//
+
 //    public List<ProductEntity> getProductsByUserId(int userId) {
 //        return productRepository.findByUserId(userId);
 //    }

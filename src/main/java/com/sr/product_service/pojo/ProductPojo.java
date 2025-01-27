@@ -22,5 +22,7 @@ public class ProductPojo {
 	public String productBrand;
 
 	public int productUserId;
+	
+	private UserPojo userPojo;
 
 }

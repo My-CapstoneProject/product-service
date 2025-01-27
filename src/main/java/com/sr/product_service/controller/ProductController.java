@@ -1,12 +1,19 @@
 package com.sr.product_service.controller;
 
+
 import com.sr.product_service.entity.ProductEntity;
+import com.sr.product_service.pojo.ProductPojo;
+import com.sr.product_service.pojo.UserPojo;
 import com.sr.product_service.service.ProductService;
+import com.sr.product_service.service.UserClient;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/products")
@@ -29,10 +36,10 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
 
-    // Get product by ID
+//     Get product by ID
     @GetMapping("/{productId}")
-    public ResponseEntity<ProductEntity> getProductById(@PathVariable int productId) {
-        ProductEntity product = productService.getProductById(productId);
+    public ResponseEntity<Optional<ProductEntity>> getProductById(@PathVariable int productId) {
+        Optional<ProductEntity> product = productService.getProductById(productId);
         return ResponseEntity.ok(product);
     }
 
@@ -56,5 +63,7 @@ public class ProductController {
         productService.deleteProductById(productId);
         return ResponseEntity.ok("Product deleted successfully!");
     }
+    
+   
 }
 
