@@ -16,7 +16,7 @@ public class ProductService {
     ProductRepo productRepository;
 
     public ProductEntity addProduct(ProductEntity newproduct) {
-        return productRepository.saveAndFlush(newproduct);
+        return productRepository.save(newproduct);
     }
 
     public List<ProductEntity> getAllProducts() {
