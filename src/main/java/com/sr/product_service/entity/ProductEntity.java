@@ -37,4 +37,7 @@ public class ProductEntity {
 	@Column(name="product_user_id")
 	public int productUserId;
 	
+	@Column(name="product_image_url")
+	public String productImageUrl;
+	
 }
